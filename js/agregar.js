@@ -45,8 +45,9 @@ function agregarAlCarritoIrTienda(){
 
 function agregarAlCarritoIrCompra(){
     var items = JSON.parse(localStorage.getItem("elems"));
-
     console.log(items);
+
+    window.location.href = "carrito.php";
 }
 
 function eliminarItemCarrito(){
@@ -58,4 +59,28 @@ function eliminarItemCarrito(){
     }
 
     alert("eliminado");
+}
+
+
+////**************************CARRITO***************************////
+function cargarItemsfromLocalStorage(){
+    if(localStorage.getItem("elems")){
+        var items = JSON.parse(localStorage.getItem("elems"));
+        var items2 = items['elems'];
+        var html = '';
+        console.log(items['elems']);
+        
+        for(var i in items2){
+            html = '<div class="seccionItems">'
+
+            html += '<img src="https://cache-graphicslib.viator.com/graphicslib/thumbs360x240/7845/SITours/entrada-de-acceso-prioritario-a-la-torre-eiffel-con-anfitri-n-in-paris-299567.jpg" alt="Paris">'
+            html += '<h4 class="h4">'+items2[i].nombre+'</h4>'
+            
+            html += '</div>'
+        }
+
+        document.getElementById("items").innerHTML = html;
+    }else{
+        document.getElementById("items").innerHTML = "<h2>Aun no tiene productos en el carrito, <a href='index.php'>Agregar Productos</a></h2>"
+    }
 }

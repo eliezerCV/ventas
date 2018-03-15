@@ -1,0 +1,35 @@
+.productos {
+    width: 50%;
+    text-align: center;
+    height: 500px;
+    box-shadow: lightcyan; 
+    background-color: lightblue;   
+    position: relative;
+    text-align: center;
+    margin: auto;
+}
+
+.seccionItems {
+    width: 50%;
+    text-align: center;
+    height: 500px;
+    box-shadow: lightcyan; 
+    background-color: lightblue;   
+    position: relative;
+    text-align: center;
+    margin: auto;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 50px;
+    margin-top: 100px;
+    position: absolute;
+}
+
+.h4 {
+    float: left;
+    display: none;
+}
